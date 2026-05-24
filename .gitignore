@@ -1,9 +1,11 @@
-# Environment
+# Environment & Config
 .env
-.env.local
-
-# Claude Code
+.env.*
+*.local
 .claude/
+
+# Build artifacts
+tsconfig.tsbuildinfo
 
 # Python
 __pycache__/
