@@ -12,8 +12,8 @@ export function useEmotion(userId: string) {
     try {
       const data = await getTodayEmotions(userId);
       setTodayData(data);
-    } catch (e) {
-      console.error("Failed to fetch today emotions:", e);
+    } catch {
+      // 后端未启动时静默
     }
   };
 
@@ -21,8 +21,8 @@ export function useEmotion(userId: string) {
     try {
       const data = await getWeekEmotions(userId);
       setWeekData(data);
-    } catch (e) {
-      console.error("Failed to fetch week emotions:", e);
+    } catch {
+      // 后端未启动时静默
     }
   };
 
@@ -31,8 +31,8 @@ export function useEmotion(userId: string) {
     try {
       const data = await getEmotionReport(userId);
       setReport(data.report);
-    } catch (e) {
-      console.error("Failed to fetch report:", e);
+    } catch {
+      // 后端未启动时静默
     } finally {
       setLoading(false);
     }
