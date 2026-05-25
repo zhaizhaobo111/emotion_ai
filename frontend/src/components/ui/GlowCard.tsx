@@ -5,10 +5,9 @@ import { ReactNode } from "react";
 interface GlowCardProps {
   children: ReactNode;
   className?: string;
-  glowColor?: string;
 }
 
-export default function GlowCard({ children, className = "", glowColor = "rgba(139, 92, 246, 0.15)" }: GlowCardProps) {
+export default function GlowCard({ children, className = "" }: GlowCardProps) {
   return (
     <motion.div
       className={`glow-card p-4 ${className}`}

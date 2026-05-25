@@ -5,20 +5,20 @@ module.exports = {
     extend: {
       colors: {
         bg: {
-          primary: "#0a0e1a",
-          secondary: "#111827",
-          card: "#1a1f35",
+          primary: "#1a0a14",
+          secondary: "#231020",
+          card: "#2a1525",
         },
         accent: {
-          blue: "#3b82f6",
-          purple: "#8b5cf6",
-          cyan: "#06b6d4",
-          pink: "#ec4899",
+          pink: "#f472b6",
+          hot: "#ec4899",
+          light: "#fbcfe8",
+          rose: "#fda4af",
         },
         glow: {
-          blue: "rgba(59, 130, 246, 0.3)",
-          purple: "rgba(139, 92, 246, 0.3)",
-          cyan: "rgba(6, 182, 212, 0.3)",
+          pink: "rgba(244, 114, 182, 0.3)",
+          hot: "rgba(236, 72, 153, 0.3)",
+          light: "rgba(251, 207, 232, 0.2)",
         },
       },
       animation: {

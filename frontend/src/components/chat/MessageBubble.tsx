@@ -21,19 +21,19 @@ export default function MessageBubble({ role, content, emotion, emotionScore, is
       transition={{ duration: 0.3 }}
     >
       <div className={`max-w-[80%] ${isUser ? "order-1" : "order-1"}`}>
-        {/* Emotion badge for AI messages */}
+        {/* 情绪标签 */}
         {!isUser && emotion && (
           <div className="mb-1">
             <EmotionBadge emotion={emotion} score={emotionScore || 0} />
           </div>
         )}
 
-        {/* Bubble */}
+        {/* 气泡 */}
         <div
           className={`px-4 py-3 rounded-2xl text-sm leading-relaxed ${
             isUser
-              ? "bg-gradient-to-r from-accent-blue to-accent-purple text-white rounded-br-md"
-              : "bg-bg-card border border-white/5 text-gray-200 rounded-bl-md"
+              ? "bg-gradient-to-r from-accent-pink to-accent-hot text-white rounded-br-md shadow-lg shadow-accent-pink/10"
+              : "bg-bg-card border border-accent-pink/10 text-pink-100 rounded-bl-md"
           }`}
         >
           {content}

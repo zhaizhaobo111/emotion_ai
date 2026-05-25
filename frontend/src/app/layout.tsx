@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-CN">
-      <body className="h-screen overflow-hidden bg-bg-primary text-gray-200">
+      <body className="h-screen overflow-hidden bg-bg-primary text-pink-100">
         <DynamicBackground />
         <div className="relative z-10 flex h-full">
           <Sidebar />

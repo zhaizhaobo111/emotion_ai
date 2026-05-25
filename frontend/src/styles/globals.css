@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #0a0e1a;
-  --bg-secondary: #111827;
-  --bg-card: #1a1f35;
-  --accent-blue: #3b82f6;
-  --accent-purple: #8b5cf6;
-  --accent-cyan: #06b6d4;
-  --accent-pink: #ec4899;
+  --bg-primary: #1a0a14;
+  --bg-secondary: #231020;
+  --bg-card: #2a1525;
+  --accent-pink: #f472b6;
+  --accent-hot: #ec4899;
+  --accent-light: #fbcfe8;
+  --accent-rose: #fda4af;
 }
 
 * {
@@ -21,11 +21,11 @@
 html, body {
   height: 100%;
   background: var(--bg-primary);
-  color: #e2e8f0;
+  color: #fce7f3;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
 }
 
-/* Scrollbar */
+/* 滚动条 */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -33,27 +33,27 @@ html, body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(139, 92, 246, 0.3);
+  background: rgba(244, 114, 182, 0.3);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(139, 92, 246, 0.5);
+  background: rgba(244, 114, 182, 0.5);
 }
 
-/* Glow effect */
+/* 发光卡片 */
 .glow-card {
-  background: linear-gradient(135deg, rgba(26, 31, 53, 0.9), rgba(17, 24, 39, 0.9));
-  border: 1px solid rgba(139, 92, 246, 0.15);
+  background: linear-gradient(135deg, rgba(42, 21, 37, 0.9), rgba(35, 16, 32, 0.9));
+  border: 1px solid rgba(244, 114, 182, 0.15);
   border-radius: 16px;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
 .glow-card:hover {
-  border-color: rgba(139, 92, 246, 0.3);
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+  border-color: rgba(244, 114, 182, 0.3);
+  box-shadow: 0 0 20px rgba(244, 114, 182, 0.12);
 }
 
-/* Typing animation */
+/* 打字光标 */
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
@@ -62,13 +62,13 @@ html, body {
   display: inline-block;
   width: 2px;
   height: 1em;
-  background: var(--accent-cyan);
+  background: var(--accent-pink);
   margin-left: 2px;
   animation: blink 0.8s infinite;
   vertical-align: text-bottom;
 }
 
-/* Emotion colors */
+/* 情绪颜色（语义色，保持不变） */
 .emotion-happy { color: #fbbf24; }
 .emotion-anxious { color: #f97316; }
 .emotion-stressed { color: #ef4444; }
@@ -77,3 +77,14 @@ html, body {
 .emotion-angry { color: #dc2626; }
 .emotion-calm { color: #10b981; }
 .emotion-excited { color: #f59e0b; }
+
+/* 花瓣飘落动画 */
+@keyframes fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+.petal-fall {
+  animation: fall linear infinite;
+}

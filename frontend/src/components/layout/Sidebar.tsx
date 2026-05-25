@@ -4,23 +4,23 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 const navItems = [
-  { href: "/", label: "聊天", icon: "💬" },
-  { href: "/emotions", label: "情绪", icon: "📊" },
-  { href: "/profile", label: "画像", icon: "👤" },
-  { href: "/settings", label: "设置", icon: "⚙️" },
+  { href: "/", label: "聊天", icon: "🌸" },
+  { href: "/emotions", label: "情绪", icon: "🦋" },
+  { href: "/profile", label: "画像", icon: "🧸" },
+  { href: "/settings", label: "设置", icon: "🎀" },
 ];
 
 export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed left-0 top-0 h-full w-16 md:w-56 bg-bg-secondary/80 backdrop-blur-xl border-r border-white/5 z-50 flex flex-col py-6">
+    <nav className="fixed left-0 top-0 h-full w-16 md:w-56 bg-bg-secondary/80 backdrop-blur-xl border-r border-accent-pink/10 z-50 flex flex-col py-6">
       {/* Logo */}
       <div className="px-4 mb-8 flex items-center gap-3">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-blue to-accent-purple flex items-center justify-center text-lg font-bold">
-          E
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-pink to-accent-hot flex items-center justify-center text-lg font-bold text-white shadow-lg shadow-accent-pink/20">
+          ✿
         </div>
-        <span className="hidden md:block text-lg font-semibold bg-gradient-to-r from-accent-blue to-accent-purple bg-clip-text text-transparent">
+        <span className="hidden md:block text-lg font-semibold bg-gradient-to-r from-accent-pink to-accent-rose bg-clip-text text-transparent">
           EmotionAI
         </span>
       </div>
@@ -35,7 +35,7 @@ export default function Sidebar() {
                 className={`relative flex items-center gap-3 px-3 py-3 rounded-xl transition-colors ${
                   active
                     ? "text-white"
-                    : "text-gray-400 hover:text-gray-200 hover:bg-white/5"
+                    : "text-pink-200/50 hover:text-pink-200 hover:bg-accent-pink/5"
                 }`}
                 whileHover={{ x: 2 }}
                 whileTap={{ scale: 0.98 }}
@@ -43,7 +43,7 @@ export default function Sidebar() {
                 {active && (
                   <motion.div
                     layoutId="nav-active"
-                    className="absolute inset-0 bg-gradient-to-r from-accent-blue/20 to-accent-purple/20 rounded-xl border border-accent-purple/20"
+                    className="absolute inset-0 bg-gradient-to-r from-accent-pink/20 to-accent-hot/20 rounded-xl border border-accent-pink/20"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
@@ -57,9 +57,9 @@ export default function Sidebar() {
 
       {/* Status */}
       <div className="px-4">
-        <div className="flex items-center gap-2 text-xs text-gray-500">
-          <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="hidden md:block">AI 在线</span>
+        <div className="flex items-center gap-2 text-xs text-pink-200/40">
+          <div className="w-2 h-2 rounded-full bg-accent-rose animate-pulse" />
+          <span className="hidden md:block">AI 在线 💕</span>
         </div>
       </div>
     </nav>

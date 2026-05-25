@@ -51,13 +51,13 @@ export default function SettingsPage() {
         animate={{ opacity: 1, y: 0 }}
         className="max-w-4xl mx-auto space-y-6"
       >
-        <h1 className="text-2xl font-bold bg-gradient-to-r from-accent-blue to-accent-purple bg-clip-text text-transparent">
-          设置
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-accent-pink to-accent-rose bg-clip-text text-transparent">
+          🎀 设置
         </h1>
 
         {/* Persona Selection */}
         <GlowCard>
-          <h3 className="text-sm font-medium text-gray-300 mb-4">选择 AI 人格</h3>
+          <h3 className="text-sm font-medium text-pink-100 mb-4">选择 AI 人格 🌷</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {personas.map((p) => {
               const active = currentPersona === p.key;
@@ -68,24 +68,24 @@ export default function SettingsPage() {
                   disabled={saving}
                   className={`p-4 rounded-xl border text-left transition-all ${
                     active
-                      ? "border-accent-purple/40 bg-accent-purple/10"
-                      : "border-white/5 bg-white/[0.02] hover:border-white/10"
+                      ? "border-accent-pink/40 bg-accent-pink/10"
+                      : "border-accent-pink/5 bg-white/[0.02] hover:border-accent-pink/15"
                   }`}
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-2xl">{personaEmojis[p.key] || "🤖"}</span>
-                    <span className={`font-medium ${active ? "text-accent-purple" : "text-gray-300"}`}>
+                    <span className={`font-medium ${active ? "text-accent-pink" : "text-pink-200/70"}`}>
                       {p.name}
                     </span>
                     {active && (
-                      <span className="ml-auto text-xs text-accent-purple bg-accent-purple/20 px-2 py-0.5 rounded-full">
-                        当前
+                      <span className="ml-auto text-xs text-accent-pink bg-accent-pink/20 px-2 py-0.5 rounded-full">
+                        当前 💕
                       </span>
                     )}
                   </div>
-                  <p className="text-xs text-gray-500">{p.description}</p>
+                  <p className="text-xs text-pink-200/40">{p.description}</p>
                 </motion.button>
               );
             })}
@@ -94,10 +94,11 @@ export default function SettingsPage() {
 
         {/* About */}
         <GlowCard>
-          <h3 className="text-sm font-medium text-gray-300 mb-2">关于 EmotionAI</h3>
-          <p className="text-xs text-gray-500 leading-relaxed">
+          <h3 className="text-sm font-medium text-pink-100 mb-2">关于 EmotionAI 🌸</h3>
+          <p className="text-xs text-pink-200/40 leading-relaxed">
             EmotionAI 是一款 AI 情绪陪伴应用，基于 LangGraph 多节点 Agent 工作流构建。
             AI 能够识别你的情绪、记住你的故事、形成你的情绪画像，并以不同人格陪伴你。
+            希望能给你带来温暖和力量 💗
           </p>
         </GlowCard>
       </motion.div>
